@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "files": ["globals.d.ts"],
     "lib": [
       "dom",
       "dom.iterable",
@@ -14,6 +15,8 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
+    "typeRoots": ["./src/@types", "./node_modules/@types"],
+
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
