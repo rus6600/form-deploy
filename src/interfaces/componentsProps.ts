@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {SVGProps} from 'react';
 
 export type BasePageProps = {
   children?: React.ReactNode;
@@ -26,7 +26,7 @@ export const plansEnum: Record<plans, plans> = {
   pro: 'pro',
 } as const;
 
-export type plansType = { name: plans; monthly: number; yearly: number; logo: string };
+export type plansType = { name: plans; monthly: number; yearly: number; logo: React.FC<SVGProps<SVGSVGElement>> };
 
 export type timePlan = 'monthly' | 'yearly';
 

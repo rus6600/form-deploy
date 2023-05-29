@@ -42,7 +42,6 @@ const Background = styled('div')`
     border-radius: 1rem;
     @media (max-width: 600px) {
       padding: 2rem;
-      height: 550px;
     }
   `}
 `;

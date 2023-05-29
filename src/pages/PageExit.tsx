@@ -23,12 +23,10 @@ const Wrapper = styled('div')`
     gap: 2rem;
     flex-direction: column;
     place-items: center;
-    height: 100%;
-    aspect-ratio: 1;
+ 
     justify-content: center;
     margin: auto;
     text-align: center;
-
     ${Logo} {
       width: 20%;
       aspect-ratio: 1;
@@ -40,6 +38,11 @@ const Wrapper = styled('div')`
 
     & p {
       color: ${theme.colors.coolGray};
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      padding: 3rem;
     }
   `}
 `;
