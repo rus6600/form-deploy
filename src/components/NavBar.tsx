@@ -40,6 +40,7 @@ const Wrapper = styled('div')`
     width: 100%;
     justify-content: center;
     background-size: cover;
+    aspect-ratio: 2/1;
     background-image: url(${MOBILE});
   }
 `;
