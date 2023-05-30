@@ -11,10 +11,14 @@ export const usePageSelect = (): React.FC => {
   const {
     formState: { activePage },
   } = useContext(FormContext);
-  if (FormPageEnum.selectPlan === activePage) return PageSelectPlan;
-  if (FormPageEnum.addOns === activePage) return PageAddOns;
-  if (FormPageEnum.summary === activePage) return PageSummary;
-  if (FormPageEnum.exit === activePage) return PageExit;
 
-  return PageYourInfo;
+  const routeHash = {
+    [FormPageEnum.yourInfo]: PageYourInfo,
+    [FormPageEnum.selectPlan]:PageSelectPlan,
+    [FormPageEnum.addOns]:PageAddOns,
+    [FormPageEnum.summary]:PageSummary,
+    [FormPageEnum.exit]:PageExit,
+  }
+
+  return routeHash[activePage];
 };
