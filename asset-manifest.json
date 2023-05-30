@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/form-deploy/static/js/main.0c964319.js",
+    "main.js": "/form-deploy/static/js/main.1350a4a1.js",
     "static/media/UbuntuRegular.ttf": "/form-deploy/static/media/UbuntuRegular.1cbb1b79a23478cc89ad.ttf",
     "static/media/UbuntuMedium.ttf": "/form-deploy/static/media/UbuntuMedium.e37c5546eb1a6efc4818.ttf",
     "static/media/UbuntuBold.ttf": "/form-deploy/static/media/UbuntuBold.fec2d0f1431a6114a6ce.ttf",
@@ -11,9 +11,9 @@
     "static/media/icon-pro.svg": "/form-deploy/static/media/icon-pro.2e7e377da9c658d608624304a0f8dae6.svg",
     "index.html": "/form-deploy/index.html",
     "static/media/icon-arcade.svg": "/form-deploy/static/media/icon-arcade.a08c098289a31bb2f66d675be71565b3.svg",
-    "main.0c964319.js.map": "/form-deploy/static/js/main.0c964319.js.map"
+    "main.1350a4a1.js.map": "/form-deploy/static/js/main.1350a4a1.js.map"
   },
   "entrypoints": [
-    "static/js/main.0c964319.js"
+    "static/js/main.1350a4a1.js"
   ]
 }
