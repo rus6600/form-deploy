@@ -31,7 +31,7 @@ const Wrapper = styled('div')`
   padding: 3rem;
   background-image: url(${DESKTOP});
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   border-radius: 1rem;
   
   @media (max-width: 600px) {

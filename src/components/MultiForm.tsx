@@ -18,7 +18,7 @@ const Wrapper = styled('div')`
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 50%;
+  width: 60%;
   height: 70%;
   padding: 1rem;
   justify-content: space-between;

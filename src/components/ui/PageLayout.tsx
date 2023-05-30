@@ -5,11 +5,13 @@ import { BasePageProps } from '../../interfaces';
 import { Buttons } from '../Buttons';
 
 interface PageLayoutProps extends BasePageProps {
-  title: string;
-  text: string;
+  title?: string;
+  text?: string;
+  hideButtons?: boolean
+
 }
 
-export const PageLayout: React.FC<PageLayoutProps> = ({ title, text, children }) => {
+export const PageLayout: React.FC<PageLayoutProps> = ({ title, text, hideButtons = false, children }) => {
   return (
     <Wrapper>
       <Background>
@@ -17,7 +19,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ title, text, children })
         <Text>{text}</Text>
         {children}
       </Background>
-      <Buttons />
+      {!hideButtons && <Buttons />}
     </Wrapper>
   );
 };
