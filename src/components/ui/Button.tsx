@@ -19,13 +19,13 @@ export const Button: React.FC<ButtonProps> = ({ text, variant = 'primary', onCli
 const StyledButton = styled('button')<{ variant?: ButtonVariants }>`
   ${({ theme, variant }) => css`
     max-width: fit-content;
-    min-width: 150px;
+    min-width: 160px;
+    padding: 14px 60px; 
     border-radius: 0.5rem;
     border: none;
     font-weight: 600;
     color: ${theme.colors.white};
     background-color: ${theme.colors.marineBlue};
-    padding: 14px 20px; 
 
     ${variant === 'tertiary' &&
     css`

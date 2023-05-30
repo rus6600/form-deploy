@@ -24,7 +24,7 @@ const Wrapper = styled('div')`
   justify-content: space-between;
   background-color: white;
   transform: translate(-50%, -50%);
-  box-shadow: 0 4px 24px rgba(63, 69, 80, 0.12);
+  box-shadow: 0 4px 24px rgba(63, 69, 80, 0.42);
   border-radius: 1rem;
 
   @media (max-width: 600px) {
