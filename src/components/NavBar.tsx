@@ -68,13 +68,14 @@ const ListItem = styled('li')<{ isSelected: boolean }>`
     flex-direction: column;
     color: ${theme.colors.white};
     list-style: none;
-    font-weight: 500;
-
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
     &:before {
       display: flex;
       position: absolute;
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
       left: -50px;
       top: -18px;
       content: counter(list);
@@ -92,8 +93,8 @@ const ListItem = styled('li')<{ isSelected: boolean }>`
       top: -20px;
       left: 0;
       font-size: 12px;
-      font-weight: 100;
-      color: ${theme.colors.lightGray};
+      font-weight: 600;
+      color: ${theme.colors.coolGray};
       content: 'STEP ' counter(list);
       align-items: center;
       justify-content: center;

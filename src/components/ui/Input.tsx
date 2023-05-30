@@ -1,18 +1,23 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { inputEnum } from '../../interfaces';
+import {inputEnum, inputsType} from '../../interfaces';
 
 interface InputProps extends React.ComponentProps<'input'> {
   error: boolean;
 }
 
 export const Input: React.FC<InputProps> = ({ name, onChange, type, value, error }) => {
-  const getPlaceholder = () => {
-    return (
-      (name === inputEnum.name && 'e.g Stephen King') ||
-      (inputEnum.email && 'e.g stephenking@lorem.com') ||
-      (inputEnum.number && 'e.g + 1 234 567 890')
-    );
+  const getPlaceholder = (getName = false) => {
+
+    const placeHolderHash = {
+      [inputEnum.name ]:['e.g Stephen King', "Name"],
+      [inputEnum.email ]:['e.g stephenking@lorem.com', "Email Address" ],
+      [inputEnum.number ]:['e.g + 1 234 567 890', "Phone Number"],
+    }
+
+    return getName ? placeHolderHash[name as inputsType][1] : placeHolderHash[name as inputsType][0]
+
+
   };
 
   const test = () => {
@@ -27,7 +32,7 @@ export const Input: React.FC<InputProps> = ({ name, onChange, type, value, error
   return (
     <Label>
       <p>
-        {name}
+        {getPlaceholder(true)}
         {error && <span>This field is required</span>}
       </p>
       <StyledInput
@@ -44,7 +49,7 @@ export const Input: React.FC<InputProps> = ({ name, onChange, type, value, error
 
 const StyledInput = styled('input')<{ error: boolean }>`
   ${({ theme, error }) => css`
-    padding: 1rem;
+    padding: 10px 15px;
     position: relative;
     border-radius: 10px;
     border: 1px solid ${theme.colors.lightGray};
@@ -94,16 +99,14 @@ const Label = styled('label')`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    font-weight: 500;
-    gap: 0.5rem;
+    gap: 0.3rem;
     color: ${theme.colors.marineBlue};
 
     & p {
       display: flex;
+      font-weight: 500;
       justify-content: space-between;
       color: ${theme.colors.marineBlue};
-      font-weight: 600;
-      text-transform: capitalize;
     }
 
     & span {

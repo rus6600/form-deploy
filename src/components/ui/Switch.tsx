@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
 
 import { PlanDataType, timePlanEnum } from '../../interfaces';
-import { FormContext } from '../../provider/context.ts';
+import { FormContext } from '../../provider/context';
 
 type SwitchProps = {
   onChange: (val: Partial<PlanDataType>) => void;

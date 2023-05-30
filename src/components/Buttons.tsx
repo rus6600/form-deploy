@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
+
 import { Button } from './ui';
 import { FormPageEnum, inputEnum, inputFieldsType } from '../interfaces';
 import { getEntries, validateEmail } from '../helpers';
@@ -7,7 +8,7 @@ import { FormContext } from '../provider/context';
 
 export const Buttons: React.FC = () => {
   const { formState, changePage, setErrors } = useContext(FormContext);
-  const moveForward = () => {
+  const moveForwards = () => {
     if (formState.activePage === FormPageEnum.yourInfo) {
       setErrors({
         ...formState.errors,
@@ -90,7 +91,7 @@ export const Buttons: React.FC = () => {
       )}
       <Button
         text="Next Step"
-        onClick={moveForward}
+        onClick={moveForwards}
         variant={formState.activePage === FormPageEnum.summary ? 'secondary' : 'primary'}></Button>
     </Wrapper>
   );

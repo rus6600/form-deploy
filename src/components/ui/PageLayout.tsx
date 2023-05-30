@@ -25,7 +25,7 @@ export const PageLayout: React.FC<PageLayoutProps> = ({ title, text, hideButtons
 };
 const Wrapper = styled('div')`
   display: flex;
-  padding: 2rem 3rem;
+  padding: 2rem 4rem;
   height: 100%;
   flex-direction: column;
 
